@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Stat Hero</string>
+    <string name="nama_karakter">Nama Karakter</string>
+    <string name="warrior">Warrior</string>
+    <string name="archer">Archer</string>
+    <string name="mage">Mage</string>
+    <string name="heroEnum">Hero</string>
+    <string name="classs">Class</string>
+    <string name="champion">Champion</string>
+    <string name="paladin">Paladin</string>
+    <string name="wizard">Wizard</string>
+    <string name="sorcerer">Sorcerer</string>
+    <string name="hunter">Hunter</string>
+    <string name="sniper">Sniper</string>
+    <string name="rare_item">Rare Item</string>
+    <string name="attack">Attack</string>
+    <string name="defense">Defense</string>
+    <string name="aspd">ASPD</string>
+    <string name="hp">HP</string>
+</resources>
