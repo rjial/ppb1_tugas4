@@ -86,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
                         imgHero.setImageDrawable(getDrawable(R.drawable.ic_baseline_account_circle_24));
                         break;
                 }
+                txtHeroPoin.setText("Hero : " + String.valueOf(hero.calculateHero()));
+                txtClassPoin.setText("Class : ");
 //                hero.setRadioGroupClass(rgClass, heroEnum);
             }
         });
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 RadioButton rb = (RadioButton) findViewById(i);
                 hero.setClassWarrior(hero.dictClassWarriorName.get(rb.getText().toString()));
+                txtClassPoin.setText("Class : " + String.valueOf(hero.calculateClass()));
             }
         });
         rgArcher.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -101,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 RadioButton rb = (RadioButton) findViewById(i);
                 hero.setClassArcher(hero.dictClassArcherName.get(rb.getText().toString()));
+                txtClassPoin.setText("Class : " + String.valueOf(hero.calculateClass()));
             }
         });
         rgMage.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -108,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 RadioButton rb = (RadioButton) findViewById(i);
                 hero.setClassMage(hero.dictClassMageName.get(rb.getText()));
+                txtClassPoin.setText("Class : " + String.valueOf(hero.calculateClass()));
             }
         });
         cbAttack.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -118,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     hero.listRareItem.remove(Hero.RateItem.ATTACK);
                 }
+                txtRareItem.setText("Item : " + String.valueOf(hero.calculateRareItem()));
             }
         });
         cbDefense.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -128,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     hero.listRareItem.remove(Hero.RateItem.DEFENSE);
                 }
+                txtRareItem.setText("Item : " + String.valueOf(hero.calculateRareItem()));
             }
         });
         cbASPD.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -138,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     hero.listRareItem.remove(Hero.RateItem.ASPD);
                 }
+                txtRareItem.setText("Item : " + String.valueOf(hero.calculateRareItem()));
             }
         });
         cbHP.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -148,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     hero.listRareItem.add(Hero.RateItem.HP);
                 }
+                txtRareItem.setText("Item : " + String.valueOf(hero.calculateRareItem()));
             }
         });
         btnHitung.setOnClickListener(new View.OnClickListener() {
